@@ -1,0 +1,20 @@
+{
+  "name": "puppeteer-screenshot-action",
+  "version": "1.0.0",
+  "description": "GitHub Action to run puppeteer script and generate a screenshot",
+  "main": "index.js",
+  "author": "Benjamin Lannon <benjamin@lannonbr.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.0.0",
+    "@actions/io": "^1.0.0",
+    "puppeteer-core": "^1.19.0"
+  },
+  "devDependencies": {
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.7"
+  },
+  "scripts": {
+    "build": "webpack"
+  }
+}

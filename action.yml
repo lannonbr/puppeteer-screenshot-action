@@ -8,3 +8,11 @@ inputs:
   url:
     required: true
     description: "The URL you want puppeteer to visit"
+  width:
+    required: false
+    description: "Browser viewport width"
+    default: 1920
+  height:
+    required: false
+    description: "Browser viewport height"
+    default: 1080

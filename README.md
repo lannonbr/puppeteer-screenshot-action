@@ -1,6 +1,13 @@
 # Puppeteer Screenshot Action
 
-A GitHub Action to open Puppeteer and take a screenshot of the page. The screenshot will be saved to $GITHUB_WORKSPACE/screenshots/screenshot-${timestamp}.png where the timestamp is the unix timestamp of when the image was taken.
+A GitHub Action to open Puppeteer and take a screenshot of the page. The screenshot will be saved to `$GITHUB_WORKSPACE/screenshots/screenshot-${timestamp}.png` where the timestamp is the unix timestamp of when the image was taken.
+
+More on GitHub Actions [here](https://github.com/features/actions)
+
+# Prerequisites
+
+- Node.js ([Download](https://nodejs.org/en/download/))
+- yarn package manager ([Download](https://yarnpkg.com/lang/en/docs/install))
 
 # Usage
 

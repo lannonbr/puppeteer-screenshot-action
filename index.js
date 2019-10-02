@@ -1,9 +1,15 @@
 const core = require("@actions/core");
 const puppeteer = require("puppeteer-core");
 const io = require("@actions/io");
+const os = require("os");
 
 (async () => {
   await io.mkdirP(`${process.env.GITHUB_WORKSPACE}/screenshots/`);
+
+  console.log("OS Info --");
+  console.log(os.type());
+  console.log(os.release());
+  console.log("-- End OS Info")
 
   const url = core.getInput("url");
 

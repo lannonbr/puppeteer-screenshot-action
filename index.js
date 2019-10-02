@@ -5,13 +5,15 @@ const io = require("@actions/io");
 (async () => {
   await io.mkdirP(`${process.env.GITHUB_WORKSPACE}/screenshots/`);
 
-  let url = core.getInput("url");
+  const url = core.getInput("url");
 
   const timestamp = new Date().getTime();
+  const width = parseInt(core.getInput("width"));
+  const height = parseInt(core.getInput("height"));
 
   const browser = await puppeteer.launch({
     executablePath: "/usr/bin/google-chrome",
-    defaultViewport: { width: 1920, height: 1080 }
+    defaultViewport: { width, height }
   });
   const page = await browser.newPage();
   await page.goto(url, {

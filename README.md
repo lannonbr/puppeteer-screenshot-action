@@ -11,7 +11,7 @@ More on GitHub Actions [here](https://github.com/features/actions)
 
 ## Supported platforms
 | Platform | Tested & Working |
-| --- | --- |
+| --- | :---: |
 | `ubuntu` (16.04, 18.04) | :+1: |
 | `windows` (Server 2016 & 2019) | :+1: |
 | `macOS` | :-1: |

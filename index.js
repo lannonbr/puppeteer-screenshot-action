@@ -30,5 +30,6 @@ const io = require("@actions/io");
     core.exportVariable("TIMESTAMP", timestamp);
   } catch (error) {
     core.setFailed(`Failed to run action. ${error}`);
+    process.exit(1);
   }
 })();

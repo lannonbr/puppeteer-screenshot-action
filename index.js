@@ -10,6 +10,7 @@ const io = require("@actions/io");
   const timestamp = new Date().getTime();
   const width = parseInt(core.getInput("width"));
   const height = parseInt(core.getInput("height"));
+  const fullPage = core.getInput("fullPage") === "true";
 
   const browser = await puppeteer.launch({
     executablePath: "/usr/bin/google-chrome",
@@ -21,7 +22,7 @@ const io = require("@actions/io");
   });
   await page.waitFor(3000);
   await page.screenshot({
-    fullPage: true,
+    fullPage,
     path: `${process.env.GITHUB_WORKSPACE}/screenshots/screenshot-${timestamp}.png`
   });
   await browser.close();

@@ -4,15 +4,21 @@ A GitHub Action to open Puppeteer and take a screenshot of the page. The screens
 
 More on GitHub Actions [here](https://github.com/features/actions)
 
-# Prerequisites
+## Prerequisites
 
 - Node.js ([Download](https://nodejs.org/en/download/))
 - yarn package manager ([Download](https://yarnpkg.com/lang/en/docs/install))
 
-# Usage
+## Supported platforms
+| Platform | Versions | Tested & Working |
+| :--- | :--- | :--: |
+| `ubuntu` | 16.04, 18.04 | :+1: |
+| `windows` | Server 2016 & 2019 | :+1: |
+| `macOS` | 10.14 | :-1: |
 
-It currently only works on Ubuntu, but is planned to make it cross-platform.
+> **Why won't it work on macOS?** The [GitHub Actions virtual environment for macOS](https://help.github.com/en/articles/software-in-virtual-environments-for-github-actions#macos-1014) does not come preinstalled with Google Chrome. This is required in order to run puppeteer-core.
 
+## Example usage
 ```yaml
 steps:
   - name: Take photo of github.com

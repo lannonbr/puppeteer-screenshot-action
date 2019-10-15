@@ -4,7 +4,7 @@ const io = require("@actions/io");
 const os = require("os");
 
 function getChromePath() {
-  let browserPath = "";
+  let browserPath;
 
   if (os.type() === "Windows_NT") {
     // Chrome is usually installed as a 32-bit application, on 64-bit systems it will have a different installation path.

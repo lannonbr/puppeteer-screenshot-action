@@ -1,6 +1,9 @@
 name: "Puppeteer Screenshot Action"
 description: "Run puppeteer script and generate screenshot"
 author: "Benjamin Lannon <benjamin@lannonbr.com>"
+branding:
+  icon: 'camera'
+  color: 'green'
 runs:
   using: "node12"
   main: "lib/index.js"

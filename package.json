@@ -1,6 +1,6 @@
 {
   "name": "puppeteer-screenshot-action",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "GitHub Action to run puppeteer script and generate a screenshot",
   "main": "index.js",
   "author": "Benjamin Lannon <benjamin@lannonbr.com>",

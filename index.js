@@ -22,29 +22,34 @@ function getChromePath() {
 }
 
 (async () => {
-  await io.mkdirP(`${process.env.GITHUB_WORKSPACE}/screenshots/`);
+  try {
+    await io.mkdirP(`${process.env.GITHUB_WORKSPACE}/screenshots/`);
 
-  const url = core.getInput("url");
+    const url = core.getInput("url");
 
-  const timestamp = new Date().getTime();
-  const width = parseInt(core.getInput("width"));
-  const height = parseInt(core.getInput("height"));
-  const fullPage = core.getInput("fullPage") === "true";
+    const timestamp = new Date().getTime();
+    const width = parseInt(core.getInput("width"));
+    const height = parseInt(core.getInput("height"));
+    const fullPage = core.getInput("fullPage") === "true";
 
-  const browser = await puppeteer.launch({
-    executablePath: getChromePath(),
-    defaultViewport: { width, height }
-  });
-  const page = await browser.newPage();
-  await page.goto(url, {
-    waitUntil: "networkidle2"
-  });
-  await page.waitFor(3000);
-  await page.screenshot({
-    fullPage,
-    path: `${process.env.GITHUB_WORKSPACE}/screenshots/screenshot-${timestamp}.png`
-  });
-  await browser.close();
+    const browser = await puppeteer.launch({
+      executablePath: getChromePath(),
+      defaultViewport: { width, height }
+    });
+    const page = await browser.newPage();
+    await page.goto(url, {
+      waitUntil: "networkidle2"
+    });
+    await page.waitFor(3000);
+    await page.screenshot({
+      fullPage,
+      path: `${process.env.GITHUB_WORKSPACE}/screenshots/screenshot-${timestamp}.png`
+    });
+    await browser.close();
 
-  core.exportVariable("TIMESTAMP", timestamp);
+    core.exportVariable("TIMESTAMP", timestamp);
+  } catch (error) {
+    core.setFailed(`Failed to run action. ${error}`);
+    process.exit(1);
+  }
 })();

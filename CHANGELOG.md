@@ -1,3 +1,7 @@
+# 1.2.0 - January 30. 2020
+
+- feat: add parameter for screenshot filename
+
 # 1.1.0 - October 18, 2019
 
 - feat: add width & height parameters (#4)

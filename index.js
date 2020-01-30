@@ -31,6 +31,7 @@ function getChromePath() {
     const width = parseInt(core.getInput("width"));
     const height = parseInt(core.getInput("height"));
     const fullPage = core.getInput("fullPage") === "true";
+    const screenshotName = core.getInput("screenshotName") !== "false" ? core.getInput("screenshotName") : `screenshot-${timestamp}`;
 
     const browser = await puppeteer.launch({
       executablePath: getChromePath(),
@@ -43,7 +44,7 @@ function getChromePath() {
     await page.waitFor(3000);
     await page.screenshot({
       fullPage,
-      path: `${process.env.GITHUB_WORKSPACE}/screenshots/screenshot-${timestamp}.png`
+      path: `${process.env.GITHUB_WORKSPACE}/screenshots/${screenshotName}.png`
     });
     await browser.close();
 

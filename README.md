@@ -1,6 +1,7 @@
 # Puppeteer Screenshot Action
 
 A GitHub Action to open Puppeteer and take a screenshot of the page. The screenshot will be saved to `$GITHUB_WORKSPACE/screenshots/screenshot-${timestamp}.png` where the timestamp is the unix timestamp of when the image was taken.
+You can change the name of the saved screenshot in the config.
 
 More on GitHub Actions [here](https://github.com/features/actions)
 

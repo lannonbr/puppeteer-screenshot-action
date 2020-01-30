@@ -23,3 +23,7 @@ inputs:
     required: false
     description: "Controls whether screenshot taken includes entire page"
     default: false
+  screenshotName:
+    required: false
+    description: "The screenshot name if you do not want the default timestamp"
+    default: false

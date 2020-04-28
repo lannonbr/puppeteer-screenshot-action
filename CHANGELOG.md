@@ -1,3 +1,7 @@
+# 1.3.0 - April 27, 2020
+
+- feat: MacOS support
+
 # 1.2.0 - January 30. 2020
 
 - feat: add parameter for screenshot filename

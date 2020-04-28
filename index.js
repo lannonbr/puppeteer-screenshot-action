@@ -2,6 +2,7 @@ const core = require("@actions/core");
 const puppeteer = require("puppeteer-core");
 const io = require("@actions/io");
 const os = require("os");
+const path = require("path");
 
 function getChromePath() {
   let browserPath;

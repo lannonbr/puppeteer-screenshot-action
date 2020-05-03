@@ -27,3 +27,7 @@ inputs:
     required: false
     description: "The screenshot name if you do not want the default timestamp"
     default: false
+  ignoreHTTPSErrors:
+    required: false
+    description: "Whether Puppeteer should ignore HTTPS errors"
+    default: false

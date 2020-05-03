@@ -41,6 +41,7 @@ function getChromePath() {
     const width = parseInt(core.getInput("width"));
     const height = parseInt(core.getInput("height"));
     const fullPage = core.getInput("fullPage") === "true";
+    const ignoreHTTPSErrors = core.getInput("ignoreHTTPSErrors") === "true";
     const screenshotName =
       core.getInput("screenshotName") !== "false"
         ? core.getInput("screenshotName")
@@ -49,6 +50,7 @@ function getChromePath() {
     const browser = await puppeteer.launch({
       executablePath: getChromePath(),
       defaultViewport: { width, height },
+      ignoreHTTPSErrors: ignoreHTTPSErrors,
     });
     const page = await browser.newPage();
     await page.goto(url, {

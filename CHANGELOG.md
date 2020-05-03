@@ -1,3 +1,7 @@
+# 1.4.0 - April 27, 2020
+
+- feat: allow for ignoring HTTPS errors
+
 # 1.3.0 - April 27, 2020
 
 - feat: MacOS support

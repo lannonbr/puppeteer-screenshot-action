@@ -50,7 +50,7 @@ function getChromePath() {
     const browser = await puppeteer.launch({
       executablePath: getChromePath(),
       defaultViewport: { width, height },
-      ignoreHTTPSErrors: ignoreHTTPSErrors
+      ignoreHTTPSErrors: ignoreHTTPSErrors,
     });
     const page = await browser.newPage();
     await page.goto(url, {

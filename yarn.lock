@@ -2,15 +2,15 @@
 # yarn lockfile v1
 
 
-"@actions/core@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@actions/core/-/core-1.0.0.tgz#4a090a2e958cc300b9ea802331034d5faf42d239"
-  integrity sha512-aMIlkx96XH4E/2YZtEOeyrYQfhlas9jIRkfGPqMwXD095Rdkzo4lB6ZmbxPQSzD+e1M+Xsm98ZhuSMYGv/AlqA==
+"@actions/core@^1.2.6":
+  version "1.2.6"
+  resolved "https://registry.yarnpkg.com/@actions/core/-/core-1.2.6.tgz#a78d49f41a4def18e88ce47c2cac615d5694bf09"
+  integrity sha512-ZQYitnqiyBc3D+k7LsgSBmMDVkOVidaagDG7j3fOym77jNunWRuYx7VSHa9GNfFZh+zh61xsCjRj4JxMZlDqTA==
 
-"@actions/io@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@actions/io/-/io-1.0.0.tgz#379454174660623bb5b3bce0be8b9e2285a62bcb"
-  integrity sha512-ezrJSRdqtXtdx1WXlfYL85+40F7gB39jCK9P0jZVODW3W6xUYmu6ZOEc/UmmElUwhRyDRm1R4yNZu1Joq2kuQg==
+"@actions/io@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@actions/io/-/io-1.0.2.tgz#2f614b6e69ce14d191180451eb38e6576a6e6b27"
+  integrity sha512-J8KuFqVPr3p6U8W93DOXlXW6zFvrQAJANdS+vw0YhusLIq+bszW8zmK2Fh1C2kDPX8FMvwIl1OUcFgvJoXLbAg==
 
 "@webassemblyjs/ast@1.8.5":
   version "1.8.5"

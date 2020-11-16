@@ -1,3 +1,7 @@
+# 1.3.1 - November 16, 2020
+
+- fix: update @actions/core to use [environment files](https://docs.github.com/en/free-pro-team@latest/actions/reference/workflow-commands-for-github-actions#environment-files)
+
 # 1.3.0 - April 27, 2020
 
 - feat: MacOS support
